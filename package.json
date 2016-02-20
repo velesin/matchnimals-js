@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/velesin/matchnimals-js/issues"
   },
-  "homepage": "https://github.com/velesin/matchnimals-js#readme"
+  "homepage": "https://github.com/velesin/matchnimals-js#readme",
+  "devDependencies": {
+    "webpack": "^1.12.13"
+  }
 }

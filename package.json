@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0 --inline --no-info --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -18,14 +19,17 @@
   "homepage": "https://github.com/velesin/matchnimals-js#readme",
   "devDependencies": {
     "babel-core": "^6.7.4",
+    "babel-jest": "^9.0.3",
     "babel-loader": "^6.2.4",
     "babel-plugin-react-transform": "^2.0.2",
     "file-loader": "^0.8.5",
     "install": "^0.6.1",
+    "jest-cli": "^0.9.2",
     "npm": "^3.8.3",
     "react-transform-hmr": "^1.0.4",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "react-addons-test-utils": "^15.0.0-rc.2"
   },
   "dependencies": {
     "babel-polyfill": "^6.7.4",
@@ -33,5 +37,12 @@
     "babel-preset-react": "^6.5.0",
     "react": "^15.0.0-rc.2",
     "react-dom": "^15.0.0-rc.2"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
   }
 }
